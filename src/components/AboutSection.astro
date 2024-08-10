@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets"
+import dpImage from "../assets/images/dp.webp";
+---
+<section>
+    <div>
+        Ahoy there, matey! The name's Captain Jack Sparrow, and when it comes to the art of crafting wonders on the vast sea we call the internet, I’ve been known to be a bit of a scallywag. My journey into the mysterious world of web development began back in the year of our Lord, 2012. It was a time when I stumbled upon the treasures of Tumblr, and, with a bit of clever tinkerin', I found meself mastering the secrets of HTML and CSS to create a custom reblog button that would make any pirate proud!
+
+    </div>
+    <div class="image-container">
+        <Image src={dpImage} alt="Captain Jack Sparrow" height={200} width={200}/>
+    </div>
+</section>
+<style>
+    section {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    div {
+        max-width: 50ch;
+    }
+
+    .image-container {
+        padding: 2rem;
+    }
+
+</style>

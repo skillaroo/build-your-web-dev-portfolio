@@ -1,4 +1,6 @@
 ---
+import Button from './ui/Button.astro';
+
 interface Props {
     main: {
         headings: string[];
@@ -20,7 +22,7 @@ const { main } = Astro.props;
     {main.paragraphs.map(pText => (
         <p>{pText}</p>
     ))}
-    <button>{main.button.text}</button>
+    <Button>{main.button.text}</Button>
 </main>
 <style>
     small {
@@ -30,7 +32,7 @@ const { main } = Astro.props;
     }
 
     main {
-        height: 60vh;
+        min-height: 60vh;
         padding-top: 12rem;
     }
 

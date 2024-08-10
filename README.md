@@ -51,9 +51,18 @@ get_in_touch:
 ```
 
 2. Update your image on `src/assets/dp.png`
-3. To update metadata about your website you can edit `src/layouts/Layout.astro`
-
+3. To update metadata, color themes etc. about your website you can edit `src/layouts/Layout.astro`
 
 ## Running the project
 
 The project can be run using `npm run dev`
+
+## TODO
+
+Here are some active list of identified limitations, bugs etc.
+
+- [ ] Include more meta tags
+- [ ] Toggle Dark/Light mode
+- [ ] Add subtle animations
+- [ ] Add GA4 analytics
+- [ ] Improve docs

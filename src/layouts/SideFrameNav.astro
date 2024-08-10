@@ -1,0 +1,59 @@
+---
+interface Props {
+	email: string;
+	socials: {
+		facebook: string;
+		twitter: string;
+		github: string;
+	};
+}
+const { email, socials } = Astro.props;
+---
+<nav class="socials">
+    <a href="#">in</a>
+    <a href="#">t</a>
+    <a href="#">g</a>
+</nav>
+<nav class="email">{email}</nav>
+<style>
+	nav.socials {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		width: 2rem;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 2rem;
+		border-bottom: 0.5rem solid var(--accent);
+	}
+
+	nav.socials a {
+		color: var(--gray);
+		text-decoration: none;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		border: 1px solid var(--gray-light);
+		display: flex;
+		justify-content: center;
+		align-items: center
+	}
+
+
+	nav.email {
+		position: fixed;
+		bottom: 2rem;
+		left: 2rem;
+		transform-origin: top left;
+		rotate: 270deg;
+		padding-left: 2rem;
+		border-left: 0.5rem solid var(--accent);
+	}
+
+	@media screen and (max-width: 960px) {
+		nav.socials, nav.email {
+			display: none;
+		}
+		
+	}
+
+</style>

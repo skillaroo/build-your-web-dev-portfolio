@@ -1,18 +1,19 @@
 ---
+import Link from './ui/Link.astro';
 import { getCollection } from 'astro:content';
+import BlogCard from './ui/BlogCard.astro';
 const posts = await getCollection('blog');
 
 ---
 <section class="container">
     <h2>Latest Posts</h2>
     <div class="posts-container">
-        {posts.map(({ data: post }) => (
-            <article>
-                <p class="date">{new Date(post.date).toLocaleDateString('en-US', { dateStyle: 'long' })}</p>
-                <h4>{post.title}</h4>
-                <p class="author">{post.author}</p>
-            </article>
+        {posts.slice(0,2).map(({ data: post }) => (
+            <BlogCard post={post}/>
         ))}
+    </div>
+    <div class="view-all-blogs">
+    <Link href="/blog">View all posts</Link>
     </div>
 </section>
 <style>
@@ -29,17 +30,6 @@ const posts = await getCollection('blog');
         margin: 0;
     }
 
-    article {
-        margin-top: 0.5rem;
-        border: 1px solid var(--slate-light);
-        border-radius: 1rem;
-        padding: 1rem;
-    }
-
-    article:hover {
-        background-color: var(--slate);
-        transition: all 0.3s;
-    }
 
     div.posts-container {
         display: grid;
@@ -53,16 +43,16 @@ const posts = await getCollection('blog');
         }
     }
 
-    p.date {
-        color: var(--accent);
-        font-size: 1rem;
-        margin: 0;
-        margin-bottom: 0.5rem;
+    div.view-all-blogs {
+        margin-top: 2rem;
+        text-align: center;
     }
 
-    p.author {
-        color: var(--gray);
-        font-size: 1rem;
-        margin: 0;
+    div.view-all-blogs a {
+        color: var(--accent);
+        text-decoration: none;
     }
+
+
+
 </style>

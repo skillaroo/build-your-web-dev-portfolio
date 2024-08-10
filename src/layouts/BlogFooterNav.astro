@@ -1,0 +1,32 @@
+---
+import Link from "../components/ui/Link.astro"
+---
+<nav>
+    <ul>
+        <li><Link href="/">Home</Linkli>
+        <li><Link href="/blog">Blog</Linkli>
+    </ul>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin-right: 1rem;
+    }
+
+    a {
+        color: var(--gray-dark);
+        text-decoration: none;
+    }
+</style>

@@ -2,18 +2,13 @@
 import Navbar from './Navbar.astro';
 import Meta from './Meta.astro';
 import SideFrameNav from './SideFrameNav.astro';
+import BlogFooterNav from './BlogFooterNav.astro';
 import '../styles/global.css';
 interface Props {
 	title: string;
-	email: string;
-	socials: {
-		facebook: string;
-		twitter: string;
-		github: string;
-	};
 }
 
-const { title, email, socials } = Astro.props;
+const { title } = Astro.props;
 
 // TODO: Add the left and right social, email menus (not on mobile)
 ---
@@ -26,8 +21,14 @@ const { title, email, socials } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Navbar/>
 		<slot />
-		<SideFrameNav email={email} socials={socials}/>
+		<SideFrameNav/>
+		<BlogFooterNav/>
 	</body>
 </html>
+
+<style>
+    body {
+        padding: 8rem 2rem;
+    }
+</style>

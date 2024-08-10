@@ -34,7 +34,7 @@ const { about } = Astro.props;
         justify-content: space-between;
     }
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 768px) {
         section {
             flex-direction: column;
         }
@@ -43,8 +43,6 @@ const { about } = Astro.props;
     h2 {
         color: var(--gray-dark);
         font-size: 2rem;
-        border-bottom: 2px solid var(--slate-light);
-        padding-bottom: 1rem;
     }
 
     p {

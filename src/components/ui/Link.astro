@@ -1,0 +1,37 @@
+---
+interface Props {
+  href: string;
+  target?: '_blank' | '_self' | '_parent' | '_top';
+  rel?: string;
+}
+
+const { href, target, rel } = Astro.props;
+---
+
+<a
+  href={href}
+  target={target}
+  rel={target === '_blank' ? 'noopener noreferrer' : rel}
+  class="custom-link"
+>
+  <slot />
+</a>
+
+<style>
+  .custom-link {
+    display: inline-block;
+    background-color: var(--slate--dark);
+    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: var(--accent);
+    margin-top: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .custom-link:hover,
+  .custom-link:focus {
+    background-color: var(--slate-light);
+  }
+</style>

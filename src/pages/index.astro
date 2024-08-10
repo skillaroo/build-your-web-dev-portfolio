@@ -1,16 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
 import MainSection from "../components/MainSection.astro";
 import AboutSection from "../components/AboutSection.astro"
 import RecentBlogSection from "../components/RecentBlogSection.astro";
 import GetInTouch from "../components/GetInTouch.astro";
 import { parseSiteConfig } from "../config";
 
-const { site_title, main, about, get_in_touch} = parseSiteConfig();
+const { site_title, email, socials, main, about, get_in_touch} = parseSiteConfig();
 ---
-<Layout title={site_title}>
-	<Navbar/>
+<Layout title={site_title} email={email} socials={socials}>
 	<MainSection main={main}/>
 	<AboutSection about={about}/>
 	<RecentBlogSection/>

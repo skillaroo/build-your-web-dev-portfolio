@@ -25,8 +25,16 @@ const GetInTouchSchema = z.object({
   button: ButtonSchema,
 });
 
+const SocialsSchema = z.object({
+  twitter: z.string().url(),
+  github: z.string().url(),
+  linkedin: z.string().url(),
+});
+
 const SiteConfigSchema = z.object({
   site_title: z.string(),
+  email: z.string().email(),
+  socials: SocialsSchema,
   main: MainSchema,
   about: AboutSchema,
   get_in_touch: GetInTouchSchema,

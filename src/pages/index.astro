@@ -4,33 +4,15 @@ import Navbar from "../components/Navbar.astro";
 import MainSection from "../components/MainSection.astro";
 import AboutSection from "../components/AboutSection.astro"
 import RecentBlogSection from "../components/RecentBlogSection.astro";
-/*
-Nav bar on top
-  - logo on left
-  - set of menus with a button on right (collapse on mobile)
+import GetInTouch from "../components/GetInTouch.astro";
+import { parseSiteConfig } from "../config";
 
-Main content
-	- small text
-	- 2 line headings (2 shared of same color)
-	- paragraph
-	- button
-
-About me content
-	- small heading
-	- paragraph
-	- photo to the right
-	- on mobile photo on bottom
-
-
-Layout elements (disappear on mobile)
-	- on the left a menu containing socials
-	- on the right a menu containing email
-
-*/
+const { site_title, main, about, get_in_touch} = parseSiteConfig();
 ---
-<Layout title="Captain Jack Sparrow">
+<Layout title={site_title}>
 	<Navbar/>
-	<MainSection/>
-	<AboutSection/>
-	<RecentBlogSection
+	<MainSection main={main}/>
+	<AboutSection about={about}/>
+	<RecentBlogSection/>
+	<GetInTouch get_in_touch={get_in_touch}/>
 </Layout>

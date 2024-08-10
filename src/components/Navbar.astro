@@ -1,13 +1,12 @@
-<nav>
-    <div>
+<nav class="container-wide">
+    <div class="logo">
         <a href="/">
-            JS
+            RG
         </a>
     </div>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="#main">Main</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
     </ul>
 </nav>
 <style>
@@ -24,8 +23,34 @@
     }
 
     a {
-        color: var(--green);
+        color: var(--accent);
         text-decoration: none;
         font-size: 1.2rem;
         font-weight: 600;
+        line-height: 1.2rem;
     }
+
+    a:hover {
+        color: var(--gray);
+        transition: all 0.3s;
+    }
+
+    div.logo {
+        display: flex;
+    }
+    div.logo > a {
+        color: var(--gray);
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    div.logo > a:hover {
+        scale: 1.2;
+        color: var(--accent);
+        transition: all 0.3s;
+    }
+
+</style>

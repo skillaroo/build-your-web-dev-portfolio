@@ -20,25 +20,99 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<nav class="socials">
+			<a href="#">f</a>
+			<a href="#">t</a>
+			<a href="#">g</a>
+		</nav>
+		<nav class="email">jacksparrow@pirate.caribbean</nav>
 	</body>
 </html>
 <style is:global>
 	:root {
-		--gray: #000933;
-		--gray-light: #050e36;
-		--gray-dark: #00061e;
-		--brown: #a74b16;
-		--brown-light: #cd723e;
-		--brown-dark: #923a08;
-		--green: #05a812;
+		--slate: #0c1035;
+		--slate-light: #3e3d5e;
+		--slate-dark: #040924;
+		--gray: #dcdae6;
+		--gray-light: #f5f5f0;
+		--gray-dark: #d0cddc;
+		--accent: #d3e849;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: var(--gray);
-		color: var(--brown);
+		background-color: var(--slate-dark);
+		color: var(--gray);
 	}
 	body {
 		margin: 0;
+		font-size: 1.2rem;
 	}
+
+	button {
+        background-color: var(--slate--dark);
+        border: 2px solid var(--accent);
+        border-radius: 0.25rem;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        color: var(--accent);
+        margin-top: 2rem;
+	}
+
+	.container {
+		max-width: 1000px;
+		margin: 6rem auto;
+		padding: 0 2rem;
+	}
+
+	.container-wide {
+		max-width: 100%;
+	}
+
+	nav.socials {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		width: 2rem;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 2rem;
+		border-bottom: 0.5rem solid var(--accent);
+	}
+
+	nav.socials a {
+		color: var(--gray);
+		text-decoration: none;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		border: 1px solid var(--gray-light);
+		display: flex;
+		justify-content: center;
+		align-items: center
+	}
+
+
+	nav.email {
+		position: fixed;
+		bottom: 2rem;
+		left: 2rem;
+		transform-origin: top left;
+		rotate: 270deg;
+		padding-left: 2rem;
+		border-left: 0.5rem solid var(--accent);
+	}
+
+	@media screen and (max-width: 1000px) {
+		nav.socials, nav.email {
+			display: none;
+		}
+		
+	}
+
+
+
+    span.highlight-text {
+        color: var(--accent);
+        font-weight: 600;
+    }   
 
 </style>

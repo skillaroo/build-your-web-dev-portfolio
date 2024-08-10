@@ -1,47 +1,58 @@
-<main>
-    <small>Ahoy, my name is</small>
-    <h1 class="heading-dark">Captain Jack Sparrow.</h1>
-    <h1 class="heading-light">I captain the Black Pearl.</h1>
-    <p>I am featured in half a dozen Disney blockbusters. I am played by Johnny Depp. I am featured in half a dozen Disney blockbusters. I am played by Johnny Depp. I am featured in half a dozen Disney blockbusters. I am played by Johnny Depp.</p>
-    <button>Check out my Ship</button>
+---
+interface Props {
+    main: {
+        headings: string[];
+        paragraphs: string[];
+        button: {
+            text: string;
+            href: string;
+        };
+    };
+}
+
+const { main } = Astro.props;
+
+---
+<main class="container">
+    <small>Hi there</small>
+    <h1 class="heading-light">{main.headings[0]}</h1>
+    <h1 class="heading-dark">{main.headings[1]}</h1>
+    {main.paragraphs.map(pText => (
+        <p>{pText}</p>
+    ))}
+    <button>{main.button.text}</button>
 </main>
 <style>
     small {
-        color: var(--green);
+        color: var(--accent);
         font-weight: 600;
         font-size: 1rem;
     }
 
     main {
-        padding: 10rem 2rem;
+        height: 60vh;
+        padding-top: 12rem;
     }
 
     h1 {
         font-size: 3.5rem;
-        margin: 0;
-        margin-top: 1rem;
+        margin: 1rem 0;
     }
 
     .heading-dark {
-        color: var(--brown);
+        color: var(--slate-light);
+    }
+
+    .heading-light {
+        color: var(--gray-light);
     }
 
     p {
+        margin-top: 2rem;
         max-width: 50ch;
     }
-    .heading-light {
-        color: var(--brown-light);
-    }
 
 
-	button {
-		background-color: var(--green);
-		color: var(--gray);
-		border: none;
-		padding: 1rem 2rem;
-		border-radius: 0.5rem;
-        margin-top: 2rem;
-        font-size: 1.2rem;
-		cursor: pointer;
-	}
+
+
 </style>

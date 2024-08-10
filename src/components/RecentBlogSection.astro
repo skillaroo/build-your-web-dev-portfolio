@@ -1,5 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+const posts = await getCollection('blog');
+
+---
 <section>
     <h1>Check out some latest blogs</h1>
+    <div>
+        {posts.map((post) => (
+            <div>
+                <h2>{post.data.title}</h2>
+                <p>{post.data.author}</p>
+            </div>
+        ))}
+    </div>
 </section>
 <style>
     section {

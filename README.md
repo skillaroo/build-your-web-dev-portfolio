@@ -60,3 +60,9 @@ You can also build the project and generate static assets using `npm run build`
 - [ ] Add subtle animations
 - [ ] Add proper icons in SideFrameNav
 - [ ] Improve docs
+
+## License
+
+This project is licensed under the MIT License with an attribution clause. See the [LICENSE](LICENSE) file for details.
+
+When using this template, please provide appropriate credit and link back to this repository.

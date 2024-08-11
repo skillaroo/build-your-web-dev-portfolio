@@ -39,7 +39,7 @@ span.highlight-text {
     font-weight: 600;
 }   
 
-body.dark {
+body.light {
     --background: var(--gray-light);
     --background-light: #fafaf6;
     --text: var(--slate);

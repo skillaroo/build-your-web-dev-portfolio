@@ -17,8 +17,8 @@ const { main } = Astro.props;
 ---
 <main class="container">
     <small>Hi there</small>
-    <h1 class="heading-light">{main.headings[0]}</h1>
-    <h1 class="heading-dark">{main.headings[1]}</h1>
+    <h1>{main.headings[0]}</h1>
+    <h2 class="heading-light">{main.headings[1]}</h2>
     {main.paragraphs.map(pText => (
         <p>{pText}</p>
     ))}
@@ -39,6 +39,10 @@ const { main } = Astro.props;
     p {
         margin-top: 2rem;
         max-width: 50ch;
+    }
+
+    h2.heading-light {
+        color: var(--primary);
     }
 
 </style>

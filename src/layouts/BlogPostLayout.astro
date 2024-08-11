@@ -1,11 +1,11 @@
 ---
-import Navbar from "./ui/Navbar.astro";
-import Meta from "./ui/Meta.astro";
-import SideFrameNav from "./ui/SideFrameNav.astro";
-import BlogFooterNav from "./ui/BlogFooterNav.astro";
+import Navbar from "./components/Navbar.astro";
+import Meta from "./components/Meta.astro";
+import SideFrameNav from "./components/SideFrameNav.astro";
+import BlogFooterNav from "./components/BlogFooterNav.astro";
 import "../styles/global.css";
-import ThemeIcon from "./ui/ThemeIcon.astro";
-import GoogleAnalytics from "./ui/GoogleAnalytics.astro";
+import ThemeIcon from "./components/ThemeIcon.astro";
+import GoogleAnalytics from "./components/GoogleAnalytics.astro";
 interface Props {
 	site_title: string;
 	site_description: string;
@@ -30,12 +30,11 @@ const { site_title, site_description, email, socials } = Astro.props;
 		<title>{site_title}</title>
 		<GoogleAnalytics id="G-5D2M8W8WH9"/>
 		<style>
-			body { padding: 8rem 2rem; }
-			.theme-toggle { position: absolute; top: 1rem; right: 1rem; }
+			.theme-toggle-container { position: absolute; top: 1rem; right: 1rem; }
 		</style>
 	</head>
 	<body class="dark">
-		<div class="theme-toggle">
+		<div class="theme-toggle-container">
 			<ThemeIcon/>
 		</div>
 		<slot />

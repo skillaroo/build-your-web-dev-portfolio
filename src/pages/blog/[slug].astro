@@ -21,7 +21,7 @@ const { email, socials } = parseSiteConfig();
 
 <BlogPostLayout site_title={title} site_description={description} socials={socials} email={email}>
   <main class="container">
-  <h1>{title}</h1>
+  <h1 class="blog-title">{title}</h1>
   <p class="attribution">
     By <span class="highlight-text">{author}</span> 
     on <span class="highlight-text">{date.toDateString()}</span>
@@ -54,6 +54,10 @@ const { email, socials } = parseSiteConfig();
   .content :global(ul), .content :global(ol) {
     margin-bottom: 1.5rem;
     padding-left: 2rem;
+  }
+
+  .blog-title {
+    margin-top: 16rem;
   }
 
 </style>

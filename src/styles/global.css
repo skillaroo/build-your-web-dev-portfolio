@@ -46,3 +46,23 @@ body:not(.dark) {
     --text-light: var(--slate-light);
     --primary: var(--accent-dark);
 }
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-light);
+    font-weight: 600;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1.2rem;
+}

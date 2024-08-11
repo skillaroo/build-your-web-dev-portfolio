@@ -1,6 +1,6 @@
 site_title: "Ram Ghale"
 site_description: "Software Engineer and Designer"
-email: ram@ghale.np
+email: ram@ram-ghale.netlify.app
 socials:
   twitter: "https://twitter.com/ramghale"
   linkedin: "https://linkedin.com/in/ramghale"
@@ -13,7 +13,7 @@ main:
     - "I love to build things that make a difference in people's lives. I am passionate about technology, business, and storytelling. I am always looking for new opportunities to learn and grow."
   button:
     text: "Get in touch"
-    link: "https://ghale.np"
+    link: "https://ram-ghale.netlify.app"
 
 about:
   title: "About Me"
@@ -27,4 +27,4 @@ get_in_touch:
     - "In case you would like to get in touch with me, you can always send me an email"
   button:
     text: "Send me an Email"
-    link: "mailto://ram@ghale.np"
+    link: "mailto://ram@ram-ghale.netlify.app"

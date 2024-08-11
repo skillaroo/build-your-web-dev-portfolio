@@ -12,12 +12,12 @@ const { type = 'button' } = Astro.props;
 
 <style>
   .custom-button {
-    background-color: var(--slate--dark);
-    border: 2px solid var(--accent);
+    background-color: var(--background);
+    border: 2px solid var(--primary);
     border-radius: 0.25rem;
     padding: 1rem 2rem;
     font-size: 1rem;
-    color: var(--accent);
+    color: var(--primary);
     margin-top: 2rem;
     cursor: pointer;
   }
@@ -25,6 +25,6 @@ const { type = 'button' } = Astro.props;
   .custom-button:hover,
   .custom-button:focus {
     outline: none;
-    box-shadow: 0 0 0 2px var(--accent);
+    box-shadow: 0 0 0 2px var(--primary);
   }
 </style>

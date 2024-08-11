@@ -20,18 +20,18 @@ const { href, target, rel } = Astro.props;
 <style>
   .custom-link {
     display: inline-block;
-    background-color: var(--slate--dark);
+    background-color: var(--background);
     border-radius: 0.25rem;
     padding: 1rem 2rem;
     font-size: 1rem;
-    color: var(--accent);
+    color: var(--primary);
     margin-top: 2rem;
     text-decoration: none;
     cursor: pointer;
   }
 
-  .custom-link:hover,
-  .custom-link:focus {
-    background-color: var(--slate-light);
+  .custom-link:hover, .custom-link:focus {
+    background-color: var(--background-light);
   }
+
 </style>

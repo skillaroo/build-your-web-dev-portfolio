@@ -24,15 +24,15 @@ const { email, socials } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		padding-bottom: 2rem;
-		border-bottom: 0.5rem solid var(--accent);
+		border-bottom: 0.5rem solid var(--primary);
 	}
 
 	nav.socials a {
-		color: var(--gray);
+		color: var(--primary);
 		text-decoration: none;
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
-		border: 1px solid var(--gray-light);
+		border: 1px solid var(--text);
 		display: flex;
 		justify-content: center;
 		align-items: center
@@ -46,7 +46,7 @@ const { email, socials } = Astro.props;
 		transform-origin: top left;
 		rotate: 270deg;
 		padding-left: 2rem;
-		border-left: 0.5rem solid var(--accent);
+		border-left: 0.5rem solid var(--primary);
 	}
 
 	@media screen and (max-width: 960px) {

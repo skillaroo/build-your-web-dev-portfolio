@@ -1,9 +1,10 @@
 ---
-import Navbar from "./Navbar.astro";
-import Meta from "./Meta.astro";
-import SideFrameNav from "./SideFrameNav.astro";
-import BlogFooterNav from "./BlogFooterNav.astro";
+import Navbar from "./ui/Navbar.astro";
+import Meta from "./ui/Meta.astro";
+import SideFrameNav from "./ui/SideFrameNav.astro";
+import BlogFooterNav from "./ui/BlogFooterNav.astro";
 import "../styles/global.css";
+import ThemeIcon from "./ui/ThemeIcon.astro";
 interface Props {
 	site_title: string;
 	site_description: string;
@@ -28,9 +29,13 @@ const { site_title, site_description, email, socials } = Astro.props;
 		<title>{site_title}</title>
 		<style>
 			body { padding: 8rem 2rem; }
+			.theme-toggle { position: absolute; top: 1rem; right: 1rem; }
 		</style>
 	</head>
 	<body>
+		<div class="theme-toggle">
+			<ThemeIcon/>
+		</div>
 		<slot />
 		<SideFrameNav email={email} socials={socials} />
 		<BlogFooterNav />

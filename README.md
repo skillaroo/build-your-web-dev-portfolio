@@ -65,7 +65,7 @@ The project can be run using `npm run dev`
 
 Here are some active list of identified limitations, bugs etc.
 
-- [ ] Toggle Dark/Light mode
+- [ ] Sitemap
 - [ ] Add subtle animations
 - [ ] Add proper icons in SideFrameNav
 - [ ] Improve docs

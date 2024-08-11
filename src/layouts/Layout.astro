@@ -1,7 +1,7 @@
 ---
-import Navbar from './Navbar.astro';
-import Meta from './Meta.astro';
-import SideFrameNav from './SideFrameNav.astro';
+import Navbar from './ui/Navbar.astro';
+import Meta from './ui/Meta.astro';
+import SideFrameNav from './ui/SideFrameNav.astro';
 import '../styles/global.css';
 interface Props {
 	site_title: string;
@@ -25,7 +25,7 @@ const { site_title, site_description, email, socials } = Astro.props;
 		<Meta site_title={site_title} site_description={site_description}/>
 		<title>{site_title}</title>
 	</head>
-	<body>
+	<body class="dark">
 		<Navbar/>
 		<slot />
 		<SideFrameNav email={email} socials={socials}/>

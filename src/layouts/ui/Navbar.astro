@@ -1,3 +1,6 @@
+---
+import ThemeIcon from "./ThemeIcon.astro"
+---
 <nav class="container-wide">
     <div class="logo">
         <a href="/">
@@ -6,6 +9,7 @@
     </div>
     <ul>
         <li><a href="/blog">Blog</a></li>
+        <li><ThemeIcon/></li>
     </ul>
 </nav>
 <style>
@@ -22,7 +26,7 @@
     }
 
     nav a {
-        color: var(--accent);
+        color: var(--primary);
         text-decoration: none;
         font-size: 1.2rem;
         font-weight: 600;
@@ -30,7 +34,7 @@
     }
 
     nav a:hover {
-        color: var(--gray);
+        color: var(--text-dark);
         transition: all 0.3s;
     }
 
@@ -38,7 +42,7 @@
         display: flex;
     }
     div.logo > a {
-        color: var(--accent);
+        color: var(--primary);
         font-size: 1.5rem;
         font-weight: 600;
         text-decoration: none;
@@ -48,7 +52,7 @@
 
     div.logo > a:hover {
         scale: 1.2;
-        color: var(--accent);
+        color: var(--primary);
         transition: all 0.3s;
     }
 

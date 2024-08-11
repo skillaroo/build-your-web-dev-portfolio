@@ -33,6 +33,7 @@ const SocialsSchema = z.object({
 
 const SiteConfigSchema = z.object({
   site_title: z.string(),
+  site_description: z.string(),
   email: z.string().email(),
   socials: SocialsSchema,
   main: MainSchema,
@@ -57,11 +58,9 @@ export const parseSiteConfig = () => {
   } catch (error) {
     if (error instanceof z.ZodError) {
       console.error('Validation error:', error.errors);
-      throw error;
     } else {
       console.error('Error parsing YAML file:', error);
-      throw error;
     }
-    return null;
+    throw error;
   }
 }

@@ -4,22 +4,36 @@ interface Props {
         title: string;
         date: string;
         author: string;
-    }
+        slug: string;
+    };
 }
 
 const { post } = Astro.props;
 ---
-<article>
-    <p class="date">{new Date(post.date).toLocaleDateString('en-US', { dateStyle: 'long' })}</p>
-    <h4>{post.title}</h4>
-    <p class="author">{post.author}</p>
-</article>
 
+<a href={"/blog/" + post.slug} class="article-link">
+    <article>
+        <p class="date">
+            {
+                new Date(post.date).toLocaleDateString("en-US", {
+                    dateStyle: "long",
+                })
+            }
+        </p>
+        <h4>{post.title}</h4>
+        <p class="author">{post.author}</p>
+    </article>
+</a>
 <style>
+    .article-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
     h4 {
         color: var(--gray-dark);
     }
-article {
+    article {
         margin-top: 0.5rem;
         box-shadow: 0 0 0.25rem var(--slate-light);
         border-radius: 1rem;
@@ -30,7 +44,6 @@ article {
         background-color: var(--slate);
         transition: all 0.3s;
     }
-
 
     p.date {
         color: var(--accent);

@@ -6,16 +6,14 @@ import { parseSiteConfig } from "../../config";
 import BlogCard from "../../components/ui/BlogCard.astro";
 
 const posts = await getCollection('blog');
-const { site_title } = parseSiteConfig();
+const { site_title, site_description, email, socials } = parseSiteConfig();
 
 ---
-<Layout title={"Blog | " + site_title}>
+<Layout site_title={"Blog | " + site_title} site_description={site_description} email={email} socials={socials}>
     <main class="container">
         <h1>Blog</h1>
         {posts.map((post) => (
-            <a href={`/blog/${post.slug}`}>
-                <BlogCard post={post.data}/>
-            </a>
+                <BlogCard post={{ ...post.data, slug: post.slug}}/>
         ))}
         </main>
 </Layout>

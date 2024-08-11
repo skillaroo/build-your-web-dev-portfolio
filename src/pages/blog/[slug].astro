@@ -1,4 +1,5 @@
 ---
+import { parseSiteConfig } from "../../config";
 import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import { getCollection } from "astro:content";
 
@@ -12,14 +13,18 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const { title, author, date, description } = entry.data;
+const { email, socials } = parseSiteConfig();
+
 ---
 
-<BlogPostLayout title={entry.data.title}>
+<BlogPostLayout site_title={title} site_description={description} socials={socials} email={email}>
   <main class="container">
-  <h1>{entry.data.title}</h1>
+  <h1>{title}</h1>
   <p class="attribution">
-    By <span class="highlight-text">{entry.data.author}</span> 
-    on <span class="highlight-text">{entry.data.date.toDateString()}</span>
+    By <span class="highlight-text">{author}</span> 
+    on <span class="highlight-text">{date.toDateString()}</span>
   </p>
   <section class="content">
   <Content />
@@ -32,8 +37,6 @@ const { Content } = await entry.render();
     color: var(--gray);
     margin-bottom: 4rem;
   }
-
-
   .content {
     line-height: 1.6;
   }

@@ -6,7 +6,7 @@ interface Props {
         paragraphs: string[];
         button: {
             text: string;
-            href: string;
+            link: string;
         };
     };
 }
@@ -18,7 +18,7 @@ const { get_in_touch } = Astro.props;
     {get_in_touch.paragraphs.map(pText => (
         <p>{pText}</p>
     ))}
-    <Link href={get_in_touch.button.href}>{get_in_touch.button.text}</Link>
+    <Link href={get_in_touch.button.link}>{get_in_touch.button.text}</Link>
 </section>
 
 <style>

@@ -8,8 +8,9 @@ const posts = await getCollection('blog');
 <section class="container">
     <h2>Latest Posts</h2>
     <div class="posts-container">
-        {posts.slice(0,2).map(({ data: post }) => (
-            <BlogCard post={post}/>
+        {posts.slice(0,2).map((post) => (
+
+            <BlogCard post={{...post.data, slug: post.slug}}/>
         ))}
     </div>
     <div class="view-all-blogs">

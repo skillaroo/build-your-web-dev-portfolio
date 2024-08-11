@@ -4,26 +4,26 @@ import Meta from './Meta.astro';
 import SideFrameNav from './SideFrameNav.astro';
 import '../styles/global.css';
 interface Props {
-	title: string;
+	site_title: string;
+	site_description: string;
 	email: string;
 	socials: {
-		facebook: string;
+		linkedin: string;
 		twitter: string;
 		github: string;
 	};
 }
 
-const { title, email, socials } = Astro.props;
+const { site_title, site_description, email, socials } = Astro.props;
 
 // TODO: Add the left and right social, email menus (not on mobile)
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<Meta/>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
+		<Meta site_title={site_title} site_description={site_description}/>
+		<title>{site_title}</title>
 	</head>
 	<body>
 		<Navbar/>

@@ -6,9 +6,9 @@ import RecentBlogSection from "../components/RecentBlogSection.astro";
 import GetInTouch from "../components/GetInTouch.astro";
 import { parseSiteConfig } from "../config";
 
-const { site_title, email, socials, main, about, get_in_touch} = parseSiteConfig();
+const { site_title, site_description, email, socials, main, about, get_in_touch} = parseSiteConfig();
 ---
-<Layout title={site_title} email={email} socials={socials}>
+<Layout site_title={site_title} site_description={site_description} email={email} socials={socials}>
 	<MainSection main={main}/>
 	<AboutSection about={about}/>
 	<RecentBlogSection/>

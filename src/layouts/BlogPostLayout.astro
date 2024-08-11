@@ -5,6 +5,7 @@ import SideFrameNav from "./ui/SideFrameNav.astro";
 import BlogFooterNav from "./ui/BlogFooterNav.astro";
 import "../styles/global.css";
 import ThemeIcon from "./ui/ThemeIcon.astro";
+import GoogleAnalytics from "./ui/GoogleAnalytics.astro";
 interface Props {
 	site_title: string;
 	site_description: string;
@@ -27,6 +28,7 @@ const { site_title, site_description, email, socials } = Astro.props;
 		<Meta site_title={site_title} site_description={site_description} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{site_title}</title>
+		<GoogleAnalytics id="G-5D2M8W8WH9"/>
 		<style>
 			body { padding: 8rem 2rem; }
 			.theme-toggle { position: absolute; top: 1rem; right: 1rem; }

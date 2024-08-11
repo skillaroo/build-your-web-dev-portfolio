@@ -1,23 +1,13 @@
-# Skillaroo Web Dev Portfolio Workshop
+# Web Developer Portfolio in Astro 
 
-This repo contains code for the portfolio built during Skillaroo's workshop on 10 Aug 2024
+This repo contains a Astro.js portfolio built during Skillaroo's workshop on 10 Aug 2024.
 
-## Workshop Details
+## Skillaroo Web Dev Portfolio Workshop Details
 
-In just 4 hours, you'll learn to build a stellar portfolio page using HTML, CSS, JavaScript, Markdown, and Astro.js. Perfect for recent grads and tech career starters!
+The workshop was held online on 10 Aug 2024. The goal of the worksgop to build a stellar portfolio page using HTML, CSS, JavaScript, Markdown, and Astro.js. Perfect for recent grads and tech career starters!
 
-✨ What you'll get:
 
-- Introduction to web development basics (HTML, CSS, JavaScript)
-- Hands-on workshop with Astro.js
-- Best practices for creating an impactful portfolio
-- Personal branding in tech
-- How to leverage your portfolio for job searching
-- Q&A session with experienced developers
-- Your very own portfolio website
-- FREE domain name
-
-## How to Use
+## Customizing the website
 
 1. Edit `src/assets/site-config.yaml` to set up the site. The YAML config looks like this
 
@@ -61,9 +51,11 @@ get_in_touch:
 
 The project can be run using `npm run dev`
 
-## TODO
+You can also build the project and generate static assets using `npm run build`
 
-Here are some active list of identified limitations, bugs etc.
+## Further Work
+
+Here are some ideas for implementing on this project
 
 - [ ] Sitemap
 - [ ] Add subtle animations

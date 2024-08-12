@@ -6,14 +6,16 @@
     --gray: #dcdae6;
     --gray-light: #f5f5f0;
     --gray-dark: #d0cddc;
-    --accent: #d3e849;
-    --accent-dark: #198c05;
+    --accent: #18882b;
+    --accent-dark: #b0e021;
+    --accent-alt: #1e67ba;
 
     --background: var(--slate-dark);
     --background-light: var(--slate-light);
     --text: var(--gray-dark);
     --text-light: var(--gray-light);
-    --primary: var(--accent)
+    --primary: var(--accent-dark);
+    --secondary: var(--accent-alt);
 }
 
 body {
@@ -44,7 +46,7 @@ body:not(.dark) {
     --background-light: #fafaf6;
     --text: var(--slate);
     --text-light: var(--slate-light);
-    --primary: var(--accent-dark);
+    --primary: var(--accent);
 }
 
 

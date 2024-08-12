@@ -33,18 +33,18 @@ const { post } = Astro.props;
 
     article {
         margin-top: 0.5rem;
-        box-shadow: 0 0 0.1rem var(--primary);
-        border-radius: 1rem;
+        box-shadow: 0 0 1px var(--text););
+        border-radius: 0.25rem;
         padding: 1rem;
     }
 
     article:hover {
-        background-color: var(--background-light);
+        box-shadow: 0 0 2px var(--primary);
         transition: all 0.3s;
     }
 
     p.date {
-        color: var(--primary);
+        color: var(--accent-alt);
         font-size: 1rem;
         margin: 0;
         margin-bottom: 0.5rem;

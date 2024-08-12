@@ -1,11 +1,12 @@
 ---
-import Navbar from "./components/Navbar.astro";
 import Meta from "./components/Meta.astro";
 import SideFrameNav from "./components/SideFrameNav.astro";
 import BlogFooterNav from "./components/BlogFooterNav.astro";
-import "../styles/global.css";
 import ThemeIcon from "./components/ThemeIcon.astro";
 import GoogleAnalytics from "./components/GoogleAnalytics.astro";
+import Footer from "./components/Footer.astro";
+
+import "../styles/global.css";
 interface Props {
 	site_title: string;
 	site_description: string;
@@ -40,5 +41,6 @@ const { site_title, site_description, email, socials } = Astro.props;
 		<slot />
 		<SideFrameNav email={email} socials={socials} />
 		<BlogFooterNav />
+		<Footer />
 	</body>
 </html>

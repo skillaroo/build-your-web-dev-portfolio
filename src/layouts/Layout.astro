@@ -2,8 +2,9 @@
 import Navbar from './components/Navbar.astro';
 import Meta from './components/Meta.astro';
 import SideFrameNav from './components/SideFrameNav.astro';
-import '../styles/global.css';
 import GoogleAnalytics from './components/GoogleAnalytics.astro';
+import Footer from './components/Footer.astro';
+import '../styles/global.css';
 interface Props {
 	site_title: string;
 	site_description: string;
@@ -31,5 +32,6 @@ const { site_title, site_description, email, socials } = Astro.props;
 		<Navbar/>
 		<slot />
 		<SideFrameNav email={email} socials={socials}/>
+		<Footer/>
 	</body>
 </html>

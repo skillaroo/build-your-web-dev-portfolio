@@ -1,10 +1,18 @@
-# Web Developer Portfolio in Astro 
+<h1 align="center">
+  Web Developer Portfolio Template (Ram Ghale)
+</h1>
+<p align="center">
+  This repo contains a Astro portfolio template built during [Skillaroo's](https://skillaroo.com.au) workshop on 10 Aug 2024. It is built with <a href="https://astro.build/" target="_blank">Astro</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>. This template drawn inspiration from this <a href="https://github.com/bchiang7/v4">Gatsby template</a>.
+</p>
 
-This repo contains a Astro.js portfolio built during Skillaroo's workshop on 10 Aug 2024.
+<h4 align="center">
+  <a href="https://ram-ghale.netlify.com/">View Live</a>
+</h4>
+![Template Live Demo](/public/screenshot.png)
 
 ## About the Workshop
 
- The goal of the workshop **"Build your Web Developer Portfolio"** was to build a stellar portfolio page using HTML, CSS, JavaScript, Markdown, and Astro.js. Perfect for recent grads and tech career starters to showcase their skills, projects, and blogs.
+ The goal of the workshop **"Build your Web Developer Portfolio"** was to build a stellar portfolio page using HTML, CSS, JavaScript, Markdown, and Astro. Perfect for recent grads and tech career starters to showcase their skills, projects, and blogs.
 
 
 ## Customizing the website
